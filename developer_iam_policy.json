@@ -1,0 +1,60 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:DescribeInsightRules",
+                "logs:GetLogRecord",
+                "logs:GetQueryResults",
+                "cloudwatch:GetMetricData",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "logs:StopQuery",
+                "logs:TestMetricFilter",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:GetMetricWidgetImage",
+                "cloudwatch:ListManagedInsightRules",
+                "logs:GetLogDelivery",
+                "cloudwatch:DescribeAnomalyDetectors"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:DescribeAlarmHistory",
+                "cloudwatch:GetDashboard",
+                "cloudwatch:GetInsightRuleReport",
+                "cloudwatch:DescribeAlarms",
+                "logs:GetLogEvents",
+                "cloudwatch:GetMetricStream",
+                "codecommit:UpdatePullRequestApprovalRuleContent",
+                "codecommit:CreatePullRequestApprovalRule",
+                "codecommit:CreatePullRequest",
+                "codecommit:GitPush"
+            ],
+            "Resource": [
+                "arn:aws:cloudwatch:*:917486367086:metric-stream/*",
+                "arn:aws:cloudwatch:*:917486367086:alarm:*",
+                "arn:aws:cloudwatch:*:917486367086:insight-rule/*",
+                "arn:aws:cloudwatch::917486367086:dashboard/*",
+                "arn:aws:logs:*:917486367086:log-group:*:log-stream:*",
+                "arn:aws:codecommit:*:917486367086:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "logs:GetDataProtectionPolicy",
+                "logs:StartQuery",
+                "logs:Unmask",
+                "logs:FilterLogEvents",
+                "logs:GetLogGroupFields"
+            ],
+            "Resource": "arn:aws:logs:*:917486367086:log-group:*"
+        }
+    ]
+}
